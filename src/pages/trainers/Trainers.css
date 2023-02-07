@@ -1,0 +1,81 @@
+.trainers__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+.trainer__img {
+  border-radius: 0 2rem;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+.card.trainer {
+  padding: 1rem;
+}
+
+.trainer__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  transition: all 0.3s linear;
+}
+.trainer__icons a {
+  font-size: 1.4rem;
+  transition: all 0.3s linear;
+}
+
+.card.trainer {
+  position: relative;
+  text-align: center;
+}
+.trainer h3,
+.trainer p,
+.trainer .trainer__icons {
+  position: absolute;
+  top: 70%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  transform: scale(0);
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.trainer h3 {
+  margin-top: -5rem;
+  transition: all 0.3s linear;
+  text-align: center;
+}
+.trainer p {
+  margin-top: -2.5rem;
+  text-align: center;
+  transition: all 0.3s linear;
+}
+.trainer:hover .trainer__icons {
+  transform: scale(1);
+}
+.trainer:hover h3 {
+  transform: scale(1);
+}
+.trainer:hover p {
+  transform: scale(1);
+}
+.trainer:hover .trainer__img {
+  opacity: 0.4;
+}
+
+/* media queries */
+@media screen and (max-width: 1024px) {
+  .trainers__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .trainers__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
